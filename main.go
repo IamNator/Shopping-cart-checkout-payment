@@ -11,9 +11,9 @@ import (
 
 func main(){
 	fmt.Printf("Let's get started")
-	myrouter := mux.NewRouter()
+	router := mux.NewRouter()
 
-	myrouter.HandleFunc("/api/payment", controller.Payment)
-	myrouter.HandleFunc("/", view.Payment)
-	log.Fatal(http.ListenAndServe(":8080", myrouter))
+	router.HandleFunc("/api/payment", controller.Payment)
+	router.HandleFunc("/", view.Payment)
+	log.Fatal(http.ListenAndServe(":8080", router))
 }
