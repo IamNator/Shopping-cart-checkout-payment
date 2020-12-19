@@ -1,7 +1,13 @@
 package view
 
-import "net/http"
+import (
+	"html/template"
+	"net/http"
+)
 
 func Payment(w http.ResponseWriter, req * http.Request){
-	w.Write([]byte("payment checkout page"))
+	tpl := template.Must(template.ParseFiles("templates/checkout-page.html"))
+	tpl.Execute(w, nil)
+	//w.Write([]byte("payment checkout page"))
 }
+

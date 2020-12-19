@@ -33,7 +33,7 @@
 }
 
 .vsm-text:hover {
-    color: #FF5252
+    color: #ff5252
 }
 
 .book,
@@ -296,7 +296,7 @@ $(this).parent().prev().html(Number(count) - 1);
                         <div class="row d-flex justify-content-between px-4" id="tax">
                             <p class="mb-1 text-left">Total (tax included)</p>
                             <h6 class="mb-1 text-right">$26.48</h6>
-                        </div> <button class="btn-block btn-blue"> <span> <span id="checkout">Checkout</span> <span id="check-amt">$26.48</span> </span> </button>
+                        </div> <button class="btn-block btn-blue" action="/api/payment"  > <span> <span id="checkout">Checkout</span> <span id="check-amt">$26.48</span> </span> </button>
                     </div>
                 </div>
             </div>
